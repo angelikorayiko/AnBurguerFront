@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../imagenes/yellowlogo.png">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../javascript/login.js"></script>
+</head>
+<body>
+    <img class="imagenfondo" src="../imagenes/loginregisterimg.png">
+    <div class="centerpart">
+        <div class="firstpart">
+            <div class="logo">
+                <img class="logoimage" src="../imagenes/yellowlogo.png">
+            </div>
+            <div class="singintitle">
+                LOG IN
+            </div>
+        </div>
+        <div class="secondpart">
+            <div class="correotitle">CORREO ELECTRÓNICO:
+                <input class="correotext" id="correoField"></input>
+            </div>
+            <div class="contraseñatitle">CONTRASEÑA:
+                <input class="contraseñatext" id="contrasenaField"></input>
+            </div>
+            <div class="terminostext">
+                <div>
+                    <input type="checkbox" name="my-checkbox" id="checkbox">
+                    <label for="opt-in"></label>
+                </div>
+                <div class="textpart">He leido y acepto la política de privacidad y las<br> condiciones de uso de An'Burger</div>
+            </div>
+        </div>
+        <div class="buttonpart">
+            <button class="registrarsebutton" onclick="sendDataToServer()">
+                LOG IN
+            </button>
+        </div>
+        <div class="errormsg" id="error-message" style="display:none; color:red;"></div>
+    </div>
+</body>
+</html>

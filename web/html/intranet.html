@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="../javascript/intranet.js"></script>
+        <link rel="stylesheet" href="../css/intranet.css">
+        <title>Intranet</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="http://localhost:8080/cafeteriaFinal/mainpage/index.html" ><h1>Intranet</h1></a>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#create-user" onclick="showSection('create-user')">Create employee</a></li>
+                <li><a href="#create-product" onclick="showSection('create-product')">Create product</a></li>
+                <li><a href="#delete-user" onclick="showSection('delete-user')">Delete User</a></li>
+                <li><a href="#delete-product" onclick="showSection('delete-product')">Delete product</a></li>
+                <li><a href="#create-category" onclick="showSection('create-category')">Create category</a></li>
+                <li><a href="#delete-order" onclick="showSection('delete-order')">Delete order</a></li>
+            </ul>
+        </nav>
+
+
+        <section id="create-user" class="section" style="display: none;">
+            <h2>Create Employee</h2>
+            <form id="create-user-form">
+                <label for="nombreField">First Name:</label>
+                <input type="text" id="nombreField" name="firstname" required><br>
+
+                <label for="surnameField">Surname:</label>
+                <input type="text" id="surnameField" name="surname" required><br>
+
+                <label for="emailField">Email:</label>
+                <input type="email" id="emailField" name="email" required><br>
+
+                <label for="phoneField">Phone Number:</label>
+                <input type="tel" id="phoneField" name="phone" required><br>
+
+                <label for="passField">Password:</label>
+                <input type="password" id="passField" name="password" required><br>
+
+                <label for="storeField">Store ID:</label>
+                <input type="text" id="storeField" name="store-id" required><br>
+
+                <input type="submit" value="Submit" onclick="sendDataToServer(event)">
+            </form>
+        </section>
+
+
+        <section id="create-product" class="section" style="display: none;">
+            <h2>Create Product</h2>
+            <form id="create-product-form">
+                <label for="category">Category Name:</label>
+                <input type="text" id="category" name="category-name" required><br>
+
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required><br>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required><br>
+
+                <label for="product-url">Product URL:</label>
+                <input type="text" id="product-url" name="product-url" required><br>
+
+                <input type="submit" value="Submit" onclick="sendProductToServer()">
+            </form>
+        </section>
+
+        <section id="create-category" class="section" style="display: none;">
+            <h2>Create Category</h2>
+            <form id="create-category-form">
+                <label for="categoryNameField">Category Name:</label>
+                <input type="text" id="categoryNameField" name="category-name" required><br>
+                <input type="submit" value="Submit" onclick="sendCategoryToServer()">
+            </form>
+        </section>
+        <section id="delete-product" class="section" style="display: none;">
+            <h2>Delete Product</h2>
+            <button onclick="sendProductRequestToServer()">Refresh</button>
+            <div id="product-list"></div>
+            <div id="delete-product-result"></div>
+        </section>
+
+        <section id="delete-user" class="section" style="display: none;">
+            <h2>Delete User</h2>
+            <button onclick="sendRequestToServer()">Refresh</button>
+            <div id="employee-list"></div>
+            <div id="delete-user-result"></div>
+        </section>
+        <section id="delete-order" class="section" style="display: none;">
+            <h2>Orders</h2>
+            <button onclick="sendOrderRequestToServer()">Refresh</button>
+            <div id="order-list"></div>
+            <div id="delete-order-list"></div>
+        </section>
+
+    </body>
+
+</html>

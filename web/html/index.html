@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/x-icon" href="../imagenes/yellowlogo.png">
+    <script src="../javascript/index.js"></script>
+</head>
+<body>
+    <div class="logodiv">
+        <img src="../imagenes/yellowlogo.png" class="logo">
+        An'Burguer
+    </div>
+    <div class="usuariodiv">
+        <a href="register.html" class="registerref">
+            <img src="../imagenes/register.png" class="registericon">
+        </a>
+        <a href="login.html" class="loginref">
+            <img src="../imagenes/login.png" class="loginicon">
+        </a>
+    </div>
+    <a class="carritodiv" href="carrito.html">
+        <img src="../imagenes/carritoicon.png" class="carritoicon">
+    </a>
+    <div class="body">
+        <div class="carruseldiv">
+            <img src="../imagenes/carruselimg1.jpg" alt="" class="carruselimg">
+            <img src="../imagenes/carruselimg2.jpg" alt="" class="carruselimg">
+            <img src="../imagenes/carruselimg3.jpg" alt="" class="carruselimg">
+        </div>
+        <script>
+            // JavaScript para cambiar las imágenes cada 3 segundos
+            document.addEventListener('DOMContentLoaded', function() {
+                const images = document.querySelectorAll('.carruselimg');
+                let currentIndex = 0;
+    
+                function showImage(index) {
+                    // Ocultar todas las imágenes
+                    images.forEach(img => {
+                        img.style.display = 'none';
+                    });
+                    // Mostrar la imagen actual
+                    images[index].style.display = 'block';
+                }
+    
+                function nextImage() {
+                    currentIndex = (currentIndex + 1) % images.length; // Avanzar al siguiente índice circularmente
+                    showImage(currentIndex);
+                }
+    
+                // Mostrar la primera imagen al cargar la página
+                showImage(currentIndex);
+    
+                // Cambiar la imagen cada 3 segundos
+                setInterval(nextImage, 3000);
+            });
+        </script>
+        <div class="bodysettings">
+            <a class="cartapart" href="pdf/carta.pdf">
+                <img src="../imagenes/cartaicon.png" class="cartaicon">
+                <div class="cartatext">
+                    DESCUBRE NUESTRA CARTA
+                </div>
+            </a>
+            <div class="settingline"></div>
+            <a class="pedirpart" href="productos.html">
+                <img src="../imagenes/pediricon.png" class="pediricon">
+                <div class="cartatext">
+                    PIDE YA TU COMIDA
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

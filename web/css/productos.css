@@ -1,0 +1,111 @@
+@import url('https://fonts.cdnfonts.com/css/gill-sans-nova-cond-ultra-bold');
+@import url('https://fonts.cdnfonts.com/css/gill-sans?styles=17577');
+
+body{
+    padding: 0%;
+    margin: 0%;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 18, 18);
+    padding: 10px;
+    color: #ffc400;
+    font-family: 'Gill Sans Nova Cond Ultra Bold';
+    font-weight: 100%;
+    gap: 790px;
+}
+
+.carritoimg{
+    width: 50px;
+    height: auto;
+}
+
+.carritoimg:hover{
+    cursor: pointer;
+}
+
+.logoheader{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffc400;
+}
+
+.logoimg{
+    width: 50px;
+    height: auto;
+}
+
+.logoheader:hover{
+    cursor: pointer;
+}
+
+.usuarioheader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.registericon{
+    width: 40px;
+    height: auto;
+}
+
+.registericon:hover{
+    cursor: pointer;
+}
+
+.loginicon{
+    width: 40px;
+    height: auto;
+}
+
+.loginicon:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(19, 18, 18);
+    padding: 10px;
+}
+
+.footertext{
+    color: white;
+    font-family: 'Gill Sans';
+    font-size: 150%;
+    
+}
+
+.redesicondiv{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footericon{
+    width: 40px;
+    height: auto;
+}
