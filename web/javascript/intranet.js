@@ -211,7 +211,7 @@ function sendProductToServer() {
                 // Account created successfully
                 productCreated = true;
                 alert("Product created successfully!");
-                //window.location.href = "http://localhost:8080/cafeteriaFinal/login/paginalogin.html";
+                //window.location.href = "http://localhost:8080/AnBurguer/login/paginalogin.html";
             } else {
                 alert("Failed to create Product. Please try again.");
             }

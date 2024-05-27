@@ -30,7 +30,7 @@ function sendDataToServer() {
         success: function (response) {
             if (response.accountCreated) {
                 accountCreated = true;
-                window.location.href = "http://localhost:8080/AnBurguer/html/login.html";
+                window.location.href = "../html/login.html";
             } else {
                 // Account creation failed, display error message in the div
                 document.getElementById('error-message').style.display = 'block';
