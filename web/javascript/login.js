@@ -13,11 +13,11 @@ function sendDataToServer() {
         async: false,
         success: function (response) {
             if (response.isEmployee) {
-                window.location.href = "http://localhost:8080/AnBurguer/cd../html/intranet.html";
+                window.location.href = "http://localhost:8080/AnBurguer/html/intranet.html";
             } else if (response.accountLogged) {
                 sessionStorage.setItem('email', correo);
 
-                window.location.href = "http://localhost:8080/AnBurguer/cd../index.html";
+                window.location.href = "http://localhost:8080/AnBurguer/index.html";
             } else {
                 document.getElementById('error-message').style.display = 'block';
                 document.getElementById('error-message').innerText = "No ha sido posible iniciar sesión, pruebe de nuevo";
