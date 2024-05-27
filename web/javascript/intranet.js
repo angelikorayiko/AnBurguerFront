@@ -18,7 +18,7 @@ function sendDataToServer() {
     dataWeb.append('store', store);
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'REGISTER',
@@ -69,7 +69,7 @@ function sendCategoryToServer() {
 
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'CREATECATEGORY',
@@ -98,7 +98,7 @@ function sendRequestToServer() {
     dataWeb.append("ACTION", "INTRANET");
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'REFRESHUSERS'
@@ -141,7 +141,7 @@ function sendDeleteToServer(employeeID) {
     dataWeb.append('data-employee-id', employeeID);
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'DELETEUSER',
@@ -195,7 +195,7 @@ function sendProductToServer() {
 
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'CREATEPRODUCT',
@@ -229,7 +229,7 @@ function sendProductRequestToServer() {
     dataWeb.append("ACTION", "INTRANET");
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'REFRESHPRODUCTS'
@@ -274,7 +274,7 @@ function sendDeleteProductToServer(productID) {
     dataWeb.append('data-product-id', productID);
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'DELETEPRODUCT',
@@ -319,7 +319,7 @@ function sendOrderRequestToServer() {
     dataWeb.append("ACTION", "INTRANET");
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'REFRESHORDER'

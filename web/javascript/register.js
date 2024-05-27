@@ -16,7 +16,7 @@ function sendDataToServer() {
     dataWeb.append('contrasena', contrasena);
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'REGISTER',
             NAME: nombre,
@@ -30,7 +30,7 @@ function sendDataToServer() {
         success: function (response) {
             if (response.accountCreated) {
                 accountCreated = true;
-                window.location.href = "http://localhost:8080/cafeteriaFinal/login/paginalogin.html";
+                window.location.href = "http://localhost:8080/AnBurguer/html/login.html";
             } else {
                 // Account creation failed, display error message in the div
                 document.getElementById('error-message').style.display = 'block';

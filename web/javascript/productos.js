@@ -10,7 +10,7 @@ function sendProductRequestToServer() {
     dataWeb.append("ACTION", "INTRANET");
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'INTRANET',
             SUB_ACTION: 'REFRESHPRODUCTS'

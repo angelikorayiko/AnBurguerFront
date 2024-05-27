@@ -165,7 +165,7 @@ function sendOrderToServer() {
 
 
     $.ajax({
-        url: 'http://localhost:8080/cafeteriaFinal/Controller',
+        url: 'http://localhost:8080/AnBurguer/Controller',
         data: {
             ACTION: 'SEND_ORDER',
             SUBACTION: 'SEND_ORDER',
