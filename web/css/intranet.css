@@ -1,8 +1,9 @@
-/* Estilos generales */
+@import url('https://fonts.cdnfonts.com/css/gill-sans-nova-cond-ultra-bold');
+@import url('https://fonts.cdnfonts.com/css/gill-sans?styles=17577');
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 header {
@@ -27,6 +28,8 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     background-color: #f0f0f0;
+    
+    font-size: 100%;
 }
 
 nav ul li a:hover {
@@ -80,5 +83,7 @@ nav ul li a:hover {
 
 a{
     text-decoration: none;
-    color:black
+    color:#ffc400;
+    font-family: 'Gill Sans Nova Cond Ultra Bold';
+    font-size: 120%;
 }

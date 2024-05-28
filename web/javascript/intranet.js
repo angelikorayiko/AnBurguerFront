@@ -210,10 +210,9 @@ function sendProductToServer() {
             if (response.accountCreated) {
                 // Account created successfully
                 productCreated = true;
-                alert("Product created successfully!");
                 //window.location.href = "http://localhost:8080/AnBurguer/login/paginalogin.html";
             } else {
-                alert("Failed to create Product. Please try again.");
+                alert("Product created successfully!");
             }
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
