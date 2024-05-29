@@ -13,23 +13,23 @@
 
     <body>
         <header>
-            <a href="../html/index.html" ><h1>INTRANET AN'BURGUER</h1></a>
+            <a href="../html/index.html"><h1>INTRANET AN'BURGUER</h1></a>
         </header>
 
         <nav>
             <ul>
-                <li><a href="#create-user" onclick="showSection('create-user')">Create employee</a></li>
-                <li><a href="#create-product" onclick="showSection('create-product')">Create product</a></li>
-                <li><a href="#delete-user" onclick="showSection('delete-user')">Delete User</a></li>
-                <li><a href="#delete-product" onclick="showSection('delete-product')">Delete product</a></li>
-                <li><a href="#create-category" onclick="showSection('create-category')">Create category</a></li>
-                <li><a href="#delete-order" onclick="showSection('delete-order')">Delete order</a></li>
+                <li><a href="#create-user" onclick="showSection('create-user')">CREAR USUARIO</a></li>
+                <li><a href="#create-product" onclick="showSection('create-product')">CREAR PRODUCTOS</a></li>
+                <li><a href="#delete-user" onclick="showSection('delete-user')">BORRAR USUARIOS</a></li>
+                <li><a href="#delete-product" onclick="showSection('delete-product')">BORRAR PRODUCTOS</a></li>
+                <li><a href="#create-category" onclick="showSection('create-category')">CREAR CATEGORIAS</a></li>
+                <li><a href="#delete-order" onclick="showSection('delete-order')">BORRAR PEDIDOS</a></li>
+                <li><a href="#update-product" onclick="showSection('update-product')">ACTUALIZAR PRODUCTOS</a></li>
             </ul>
         </nav>
 
-
         <section id="create-user" class="section" style="display: none;">
-            <h2>Create Employee</h2>
+            <h2>CREAR USUARIOS</h2>
             <form id="create-user-form">
                 <label for="nombreField">First Name:</label>
                 <input type="text" id="nombreField" name="firstname" required><br>
@@ -53,9 +53,8 @@
             </form>
         </section>
 
-
         <section id="create-product" class="section" style="display: none;">
-            <h2>Create Product</h2>
+            <h2>CREAR PRODUCTOS</h2>
             <form id="create-product-form">
                 <label for="category">Category Name:</label>
                 <input type="text" id="category" name="category-name" required><br>
@@ -74,31 +73,55 @@
         </section>
 
         <section id="create-category" class="section" style="display: none;">
-            <h2>Create Category</h2>
+            <h2>CREAR CATEGORIAS</h2>
             <form id="create-category-form">
                 <label for="categoryNameField">Category Name:</label>
                 <input type="text" id="categoryNameField" name="category-name" required><br>
                 <input type="submit" value="Submit" onclick="sendCategoryToServer()">
             </form>
         </section>
+
         <section id="delete-product" class="section" style="display: none;">
-            <h2>Delete Product</h2>
+            <h2>BORRAR PRODUCTOS</h2>
             <button onclick="sendProductRequestToServer()">Refresh</button>
             <div id="product-list"></div>
             <div id="delete-product-result"></div>
         </section>
 
         <section id="delete-user" class="section" style="display: none;">
-            <h2>Delete User</h2>
+            <h2>BORRAR USUARIOS</h2>
             <button onclick="sendRequestToServer()">Refresh</button>
             <div id="employee-list"></div>
             <div id="delete-user-result"></div>
         </section>
+
         <section id="delete-order" class="section" style="display: none;">
-            <h2>Orders</h2>
+            <h2>PEDIDOS</h2>
             <button onclick="sendOrderRequestToServer()">Refresh</button>
             <div id="order-list"></div>
             <div id="delete-order-list"></div>
+        </section>
+
+        <section id="update-product" class="section" style="display: none;">
+            <h2>ACTUALIZAR PRODUCTOS</h2>
+            <form id="update-product-form">
+                <label for="update-product-id">Product ID:</label>
+                <input type="number" id="update-product-id" name="product-id" required><br>
+
+                <label for="update-category">Category Name:</label>
+                <input type="text" id="update-category" name="category-name"><br>
+
+                <label for="update-product-name">Product Name:</label>
+                <input type="text" id="update-product-name" name="product-name"><br>
+
+                <label for="update-price">Price:</label>
+                <input type="number" id="update-price" name="price"><br>
+
+                <label for="update-product-url">Product URL:</label>
+                <input type="text" id="update-product-url" name="product-url"><br>
+
+                <input type="submit" value="Submit" onclick="sendUpdateProductToServer(event)">
+            </form>
         </section>
 
     </body>

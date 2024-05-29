@@ -108,6 +108,18 @@ nav ul li a:hover {
     font-family: 'Gill Sans Nova Cond Ultra Bold';
 }
 
+#update-product {
+    background-color: black;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+#update-product h2 {
+    color: #ffc400;
+    font-family: 'Gill Sans Nova Cond Ultra Bold';
+}
+
+
 a{
     text-decoration: none;
     color:black;

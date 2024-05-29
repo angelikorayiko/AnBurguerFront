@@ -351,3 +351,46 @@ function sendOrderRequestToServer() {
         }
     });
 }
+
+function sendUpdateProductToServer(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+
+    var productId = document.getElementById('update-product-id').value;
+    var categoryName = document.getElementById('update-category').value;
+    var productName = document.getElementById('update-product-name').value;
+    var price = document.getElementById('update-price').value;
+    var productUrl = document.getElementById('update-product-url').value;
+
+    $.ajax({
+        url: 'http://localhost:8080/AnBurguer/Controller',
+        data: {
+            ACTION: 'INTRANET',
+            SUB_ACTION: 'UPDATEPRODUCT',
+            PRODUCTID: productId,
+            CATEGORYNAME: categoryName,
+            PRODUCTNAME: productName,
+            PRICE: price,
+            PRODUCTURL: productUrl
+        },
+        dataType: 'json',
+        async: false,
+        success: function (response) {
+            if (response.ProductUpdated) {
+                alert("Product updated successfully!");
+                // Optionally, refresh the product list or redirect to another page
+                sendProductRequestToServer();
+            } else {
+                alert("Failed to update product. Please try again.");
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert("Status: " + textStatus);
+            alert("Error: " + errorThrown);
+        }
+    });
+}
+
+
+
+
+
